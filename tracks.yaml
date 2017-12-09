@@ -16,7 +16,7 @@ tracks:
     last_version: 1.12.4
     name: upstream
     patches: null
-    release_inc: '4'
+    release_inc: '5'
     release_repo_url: git@github.com:ros2-gbp/vision_opencv
     release_tag: 84a7420313c0f829842de7b2b4f7900118155bba
     ros_distro: ardent
