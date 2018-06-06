@@ -13,16 +13,16 @@ tracks:
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
     devel_branch: ros2
-    last_version: 1.12.4
-    name: upstream
+    last_version: 2.0.0
+    name: vision_opencv
     patches: null
     release_inc: '5'
-    release_repo_url: git@github.com:ros2-gbp/vision_opencv
-    release_tag: 84a7420313c0f829842de7b2b4f7900118155bba
+    release_repo_url: null
+    release_tag: 2.0.0
     ros_distro: ardent
     vcs_type: git
-    vcs_uri: https://github.com/ros2/vision_opencv.git
-    version: :{auto}
+    vcs_uri: https://github.com/ros-perception/vision_opencv.git
+    version: 2.0.0
   r2b2:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri
