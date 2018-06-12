@@ -10,13 +10,13 @@ struct PinholeCameraModel::Cache
   DistortionState distortion_state;
 
   cv::Mat_<double> K_binned, P_binned; // Binning applied, but not cropping
-  
+
   mutable bool full_maps_dirty;
   mutable cv::Mat full_map1, full_map2;
 
   mutable bool reduced_maps_dirty;
   mutable cv::Mat reduced_map1, reduced_map2;
-  
+
   mutable bool rectified_roi_dirty;
   mutable cv::Rect rectified_roi;
 
@@ -100,7 +100,7 @@ bool PinholeCameraModel::fromCameraInfo(const sensor_msgs::msg::CameraInfo& msg)
   // Create our repository of cached data (rectification maps, etc.)
   if (!cache_)
     cache_ = std::make_shared<Cache>();
-  
+
   // Binning = 0 is considered the same as binning = 1 (no binning).
   uint32_t binning_x = msg.binning_x ? msg.binning_x : 1;
   uint32_t binning_y = msg.binning_y ? msg.binning_y : 1;
@@ -114,7 +114,7 @@ bool PinholeCameraModel::fromCameraInfo(const sensor_msgs::msg::CameraInfo& msg)
 
   // Update time stamp (and frame_id if that changes for some reason)
   cam_info_.header = msg.header;
-  
+
   // Update any parameters that have changed. The full rectification maps are
   // invalidated by any change in the calibration parameters OR binning.
   bool &full_dirty = cache_->full_maps_dirty;
