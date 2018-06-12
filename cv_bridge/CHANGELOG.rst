@@ -2,6 +2,43 @@
 Changelog for package cv_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.0 (2018-06-06)
+-------------------
+* Port cv_bridge to ros2 
+* Remove the old inherent boost files
+* Replace boost code with newer C++ standard higher than C++11
+* Add a new readme
+* Adapt message definition like sensor_msg/Image etc in ROS2
+* Coding style alignment with ROS2 using cppcheck/cpplint and python flake8/pep257
+* Enable all the C++/Python unit test with gtest and unittest with ament tools
+* Contributors: Ethan Gao
+
+1.12.7 (2017-11-12)
+-------------------
+
+1.12.6 (2017-11-11)
+-------------------
+* fix endianness issues
+* Contributors: Vincent Rabaud
+
+1.12.5 (2017-11-05)
+-------------------
+* add version_gte for opencv3
+  @vrabaud If you'll update opencv3 version as discussed in https://discourse.ros.org/t/opencv-3-3/2674/4, I think we'd better to add 'version_gte' tag so that apt-get install ros-kinetic-cv-bridge also pulls openv3.3 from repository, to avoid API breaking issue between opencv2 and opencv3.
+* Simplify the dependency components of cv_bridge
+  Fixes `#183 <https://github.com/ros-perception/vision_opencv/issues/183>`_
+* Fixes `#177 <https://github.com/ros-perception/vision_opencv/issues/177>`_
+  The Python bridge was wrong on OpenCV2 with mono8 (and any Mat
+  with only two dimensions btw). Took the official Python bridge
+  from OpenCV.
+* Add missing test file
+  This fixes `#171 <https://github.com/ros-perception/vision_opencv/issues/171>`_
+* Properly deal with alpha in image compression.
+  That fixes `#169 <https://github.com/ros-perception/vision_opencv/issues/169>`_
+* Silence warnings about un-used variables
+* export OpenCV variables
+* Contributors: Kei Okada, Victor Lamoine, Vincent Rabaud
+
 1.12.4 (2017-01-29)
 -------------------
 * properly find Boost Python 2 or 3
