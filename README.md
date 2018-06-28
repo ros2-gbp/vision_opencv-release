@@ -1,3 +1,31 @@
+## vision_opencv (bouncy) - 2.0.1-0
+
+The packages in the `vision_opencv` repository were released into the `bouncy` distro by running `/usr/bin/bloom-release vision_opencv -r bouncy -t bouncy -n` on `Thu, 28 Jun 2018 20:03:53 -0000`
+
+The `image_geometry` package was released.
+
+These packages were explicitly ignored:
+- `cv_bridge`
+- `opencv_tests`
+- `vision_opencv`
+
+Version of package(s) in repository `vision_opencv`:
+
+- upstream repository: https://github.com/ros-perception/vision_opencv.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `2.0.0-3`
+- new version: `2.0.1-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.5`
+- catkin_pkg version: `0.4.3`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## vision_opencv (bouncy) - 2.0.0-3
 
 The packages in the `vision_opencv` repository were released into the `bouncy` distro by running `/usr/bin/bloom-release --rosdistro bouncy --track bouncy vision_opencv` on `Tue, 19 Jun 2018 10:11:29 -0000`
