@@ -79,7 +79,8 @@ private:
 
 using namespace cv;
 
-static PyObject * failmsgp(const char * fmt, ...)
+
+[[gnu::unused]] static PyObject * failmsgp(const char * fmt, ...)
 {
   char str[1000];
 
@@ -102,7 +103,7 @@ public:
   {
     UMatData * u = new UMatData(this);
     u->data = u->origdata =
-        reinterpret_cast<uchar *>(PyArray_DATA(reinterpret_cast<PyArrayObject *>(o)));
+      reinterpret_cast<uchar *>(PyArray_DATA(reinterpret_cast<PyArrayObject *>(o)));
     npy_intp * _strides = PyArray_STRIDES(reinterpret_cast<PyArrayObject *>(o));
     for (int i = 0; i < dims - 1; i++) {
       step[i] = (size_t)_strides[i];
