@@ -1,0 +1,12 @@
+Source: ros-crystal-vision-opencv
+Section: misc
+Priority: extra
+Maintainer: Ethan Gao <ethan.gao@linux.intel.com>
+Build-Depends: debhelper (>= 9.0.0), ros-crystal-ament-cmake, ros-crystal-ros-workspace
+Homepage: http://www.ros.org/wiki/vision_opencv
+Standards-Version: 3.9.2
+
+Package: ros-crystal-vision-opencv
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-crystal-cv-bridge, ros-crystal-image-geometry, ros-crystal-ros-workspace
+Description: Packages for interfacing ROS2 with OpenCV, a library of programming functions for real time computer vision.
