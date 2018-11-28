@@ -1,0 +1,12 @@
+Source: ros-crystal-cv-bridge
+Section: misc
+Priority: extra
+Maintainer: Ethan Gao <ethan.gao@linux.intel.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, libopencv-dev, python3-numpy, python3-opencv, ros-crystal-ament-cmake-gtest, ros-crystal-ament-cmake-pytest, ros-crystal-ament-cmake-ros, ros-crystal-ament-lint-auto, ros-crystal-ament-lint-common, ros-crystal-python-cmake-module, ros-crystal-sensor-msgs, ros-crystal-ros-workspace
+Homepage: http://www.ros.org/wiki/cv_bridge
+Standards-Version: 3.9.2
+
+Package: ros-crystal-cv-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, libopencv-dev, python3-numpy, ros-crystal-ament-index-python, ros-crystal-sensor-msgs, ros-crystal-ros-workspace
+Description: This contains CvBridge, which converts between ROS2 Image messages and OpenCV images.
