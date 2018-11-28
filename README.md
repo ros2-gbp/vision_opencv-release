@@ -1,3 +1,32 @@
+## vision_opencv (crystal) - 2.1.0-0
+
+The packages in the `vision_opencv` repository were released into the `crystal` distro by running `/usr/bin/bloom-release --rosdistro crystal --track crystal vision_opencv` on `Wed, 28 Nov 2018 16:13:47 -0000`
+
+These packages were released:
+- `cv_bridge`
+- `image_geometry`
+- `vision_opencv`
+
+These packages were explicitly ignored:
+- `opencv_tests`
+
+Version of package(s) in repository `vision_opencv`:
+
+- upstream repository: https://github.com/ros-perception/vision_opencv.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.1.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.9`
+- catkin_pkg version: `0.4.9`
+- rosdep version: `0.13.0`
+- rosdistro version: `0.7.0`
+- vcstools version: `0.1.40`
+
+
 ## vision_opencv (bouncy) - 2.0.5-0
 
 The packages in the `vision_opencv` repository were released into the `bouncy` distro by running `/usr/bin/bloom-release --rosdistro bouncy --track bouncy vision_opencv` on `Fri, 17 Aug 2018 14:47:50 -0000`
