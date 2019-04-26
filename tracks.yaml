@@ -1,3 +1,4 @@
+release_repo_url: git@github.com:ros2-gbp/vision_opencv-release.git
 tracks:
   bouncy:
     actions:
