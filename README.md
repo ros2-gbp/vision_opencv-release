@@ -1,3 +1,32 @@
+## vision_opencv (dashing) - 2.1.1-1
+
+The packages in the `vision_opencv` repository were released into the `dashing` distro by running `/usr/bin/bloom-release --rosdistro dashing --track dashing --new-track vision_opencv --override-release-repository-push-url git@github.com:ros2-gbp/vision_opencv-release.git -d` on `Fri, 26 Apr 2019 15:20:33 -0000`
+
+These packages were released:
+- `cv_bridge`
+- `image_geometry`
+- `vision_opencv`
+
+These packages were explicitly ignored:
+- `opencv_tests`
+
+Version of package(s) in repository `vision_opencv`:
+
+- upstream repository: https://github.com/ros-perception/vision_opencv.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.1.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.11`
+- rosdep version: `0.15.1`
+- rosdistro version: `0.7.3`
+- vcstools version: `0.1.40`
+
+
 ## vision_opencv (crystal) - 2.1.0-0
 
 The packages in the `vision_opencv` repository were released into the `crystal` distro by running `/usr/bin/bloom-release --rosdistro crystal --track crystal vision_opencv` on `Wed, 28 Nov 2018 16:13:47 -0000`
