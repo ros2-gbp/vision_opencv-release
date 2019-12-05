@@ -1,0 +1,13 @@
+Source: ros-dashing-image-geometry
+Section: misc
+Priority: optional
+Maintainer: Mikael Arguedas <mikael@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), libopencv-dev, ros-dashing-ament-cmake-gtest, ros-dashing-ament-cmake-pytest, ros-dashing-ament-cmake-python, ros-dashing-ament-cmake-ros, ros-dashing-sensor-msgs, ros-dashing-ros-workspace
+Homepage: http://www.ros.org/wiki/image_geometry
+Standards-Version: 3.9.2
+
+Package: ros-dashing-image-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopencv-dev, ros-dashing-sensor-msgs, ros-dashing-ros-workspace
+Description: `image_geometry` contains C++ and Python libraries for interpreting images geometrically.
+ It interfaces the calibration parameters in sensor_msgs/CameraInfo messages with OpenCV functions such as image rectification, much as cv_bridge interfaces ROS sensor_msgs/Image with OpenCV data types.
