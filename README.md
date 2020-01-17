@@ -1,3 +1,32 @@
+## vision_opencv (eloquent) - 2.1.4-1
+
+The packages in the `vision_opencv` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --rosdistro eloquent vision_opencv` on `Fri, 17 Jan 2020 19:40:21 -0000`
+
+These packages were released:
+- `cv_bridge`
+- `image_geometry`
+- `vision_opencv`
+
+These packages were explicitly ignored:
+- `opencv_tests`
+
+Version of package(s) in repository `vision_opencv`:
+
+- upstream repository: https://github.com/ros-perception/vision_opencv.git
+- release repository: https://github.com/ros2-gbp/vision_opencv-release.git
+- rosdistro version: `2.1.3-1`
+- old version: `2.1.3-1`
+- new version: `2.1.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.15`
+- rosdep version: `0.18.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## vision_opencv (dashing) - 2.1.3-1
 
 The packages in the `vision_opencv` repository were released into the `dashing` distro by running `/usr/bin/bloom-release -r dashing -t dashing vision_opencv` on `Thu, 05 Dec 2019 19:17:17 -0000`
