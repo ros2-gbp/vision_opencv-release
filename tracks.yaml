@@ -191,4 +191,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros-perception/vision_opencv.git
-    version: :{auto}
+    version: 2.2.0
+    version_saved: :{auto}
