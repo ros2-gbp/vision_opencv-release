@@ -1,3 +1,32 @@
+## vision_opencv (foxy) - 2.2.1-1
+
+The packages in the `vision_opencv` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy vision_opencv` on `Thu, 16 Jul 2020 17:05:42 -0000`
+
+These packages were released:
+- `cv_bridge`
+- `image_geometry`
+- `vision_opencv`
+
+These packages were explicitly ignored:
+- `opencv_tests`
+
+Version of package(s) in repository `vision_opencv`:
+
+- upstream repository: https://github.com/ros-perception/vision_opencv.git
+- release repository: https://github.com/ros2-gbp/vision_opencv-release.git
+- rosdistro version: `2.2.0-1`
+- old version: `2.2.0-1`
+- new version: `2.2.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## vision_opencv (foxy) - 2.2.0-1
 
 The packages in the `vision_opencv` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy vision_opencv` on `Wed, 27 May 2020 21:48:17 -0000`
