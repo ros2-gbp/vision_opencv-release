@@ -40,6 +40,7 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <sensor_msgs/image_encodings.hpp>
+#include "rcpputils/endian.hpp"
 
 #include <map>
 #include <memory>
@@ -97,6 +98,7 @@ int getCvType(const std::string & encoding)
 
   // Miscellaneous
   if (encoding == enc::YUV422) {return CV_8UC2;}
+  if (encoding == enc::YUV422_YUY2) {return CV_8UC2;}
 
   // Check all the generic content encodings
   std::cmatch m;
@@ -118,7 +120,7 @@ int getCvType(const std::string & encoding)
 
 /// @cond DOXYGEN_IGNORE
 
-enum Encoding { INVALID = -1, GRAY = 0, RGB, BGR, RGBA, BGRA, YUV422, BAYER_RGGB, BAYER_BGGR,
+enum Encoding { INVALID = -1, GRAY = 0, RGB, BGR, RGBA, BGRA, YUV422, YUV422_YUY2, BAYER_RGGB, BAYER_BGGR,
   BAYER_GBRG, BAYER_GRBG};
 
 Encoding getEncoding(const std::string & encoding)
@@ -129,6 +131,7 @@ Encoding getEncoding(const std::string & encoding)
   if ((encoding == enc::BGRA8) || (encoding == enc::BGRA16)) {return BGRA;}
   if ((encoding == enc::RGBA8) || (encoding == enc::RGBA16)) {return RGBA;}
   if (encoding == enc::YUV422) {return YUV422;}
+  if (encoding == enc::YUV422_YUY2) {return YUV422_YUY2;}
 
   if ((encoding == enc::BAYER_RGGB8) || (encoding == enc::BAYER_RGGB16)) {return BAYER_RGGB;}
   if ((encoding == enc::BAYER_BGGR8) || (encoding == enc::BAYER_BGGR16)) {return BAYER_BGGR;}
@@ -183,6 +186,12 @@ std::map<std::pair<Encoding, Encoding>, std::vector<int>> getConversionCodes()
   res[std::make_pair(YUV422, RGBA)].push_back(cv::COLOR_YUV2RGBA_UYVY);
   res[std::make_pair(YUV422, BGRA)].push_back(cv::COLOR_YUV2BGRA_UYVY);
 
+  res[std::make_pair(YUV422_YUY2, GRAY)].push_back(cv::COLOR_YUV2GRAY_YUY2);
+  res[std::make_pair(YUV422_YUY2, RGB)].push_back(cv::COLOR_YUV2RGB_YUY2);
+  res[std::make_pair(YUV422_YUY2, BGR)].push_back(cv::COLOR_YUV2BGR_YUY2);
+  res[std::make_pair(YUV422_YUY2, RGBA)].push_back(cv::COLOR_YUV2RGBA_YUY2);
+  res[std::make_pair(YUV422_YUY2, BGRA)].push_back(cv::COLOR_YUV2BGRA_YUY2);
+
   // Deal with Bayer
   res[std::make_pair(BAYER_RGGB, GRAY)].push_back(cv::COLOR_BayerBG2GRAY);
   res[std::make_pair(BAYER_RGGB, RGB)].push_back(cv::COLOR_BayerBG2RGB);
@@ -208,9 +217,9 @@ const std::vector<int> getConversionCode(std::string src_encoding, std::string d
   Encoding src_encod = getEncoding(src_encoding);
   Encoding dst_encod = getEncoding(dst_encoding);
   bool is_src_color_format = enc::isColor(src_encoding) || enc::isMono(src_encoding) ||
-    enc::isBayer(src_encoding) || (src_encoding == enc::YUV422);
+    enc::isBayer(src_encoding) || (src_encoding == enc::YUV422) || (src_encoding == enc::YUV422_YUY2);
   bool is_dst_color_format = enc::isColor(dst_encoding) || enc::isMono(dst_encoding) ||
-    enc::isBayer(dst_encoding) || (dst_encoding == enc::YUV422);
+    enc::isBayer(dst_encoding) || (dst_encoding == enc::YUV422) || (dst_encoding == enc::YUV422_YUY2);
   bool is_num_channels_the_same =
     (enc::numChannels(src_encoding) == enc::numChannels(dst_encoding));
 
@@ -289,8 +298,9 @@ cv::Mat matFromImage(const sensor_msgs::msg::Image & source)
   // If the endianness is the same as locally, share the data
   cv::Mat mat(source.height, source.width, source_type, const_cast<uchar *>(&source.data[0]),
     source.step);
-  if ((boost::endian::order::native == boost::endian::order::big && source.is_bigendian) ||
-    (boost::endian::order::native == boost::endian::order::little && !source.is_bigendian) ||
+
+   if ((rcpputils::endian::native == rcpputils::endian::big && source.is_bigendian) ||
+    (rcpputils::endian::native == rcpputils::endian::little && !source.is_bigendian) ||
     byte_depth == 1)
   {
     return mat;
@@ -382,7 +392,7 @@ void CvImage::toImageMsg(sensor_msgs::msg::Image & ros_image) const
   ros_image.height = image.rows;
   ros_image.width = image.cols;
   ros_image.encoding = encoding;
-  ros_image.is_bigendian = (boost::endian::order::native == boost::endian::order::big);
+  ros_image.is_bigendian = (rcpputils::endian::native == rcpputils::endian::big);
   ros_image.step = image.cols * image.elemSize();
   size_t size = ros_image.step * image.rows;
   ros_image.data.resize(size);
@@ -431,8 +441,8 @@ CvImageConstPtr toCvShare(
   const std::string & encoding)
 {
   // If the encoding different or the endianness different, you have to copy
-  if ((!encoding.empty() && source.encoding != encoding) || (source.is_bigendian &&
-    (boost::endian::order::native != boost::endian::order::big)))
+  if ((!encoding.empty() && source.encoding != encoding) || (!source.is_bigendian !=
+    (rcpputils::endian::native != rcpputils::endian::big)))
   {
     return toCvCopy(source, encoding);
   }
