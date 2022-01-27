@@ -1,0 +1,12 @@
+Source: ros-rolling-cv-bridge
+Section: misc
+Priority: optional
+Maintainer: Ethan Gao <ethan.gao@linux.intel.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-dev, libboost-python-dev, libopencv-dev, python3-numpy, python3-opencv, ros-rolling-ament-cmake-gtest, ros-rolling-ament-cmake-pytest, ros-rolling-ament-cmake-ros, ros-rolling-ament-lint-auto, ros-rolling-ament-lint-common, ros-rolling-python-cmake-module, ros-rolling-sensor-msgs, ros-rolling-ros-workspace
+Homepage: http://www.ros.org/wiki/cv_bridge
+Standards-Version: 3.9.2
+
+Package: ros-rolling-cv-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-python1.71.0, libopencv-dev, python3-numpy, ros-rolling-ament-index-python, ros-rolling-sensor-msgs, ros-rolling-ros-workspace
+Description: This contains CvBridge, which converts between ROS2 Image messages and OpenCV images.
