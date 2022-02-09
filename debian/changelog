@@ -1,0 +1,417 @@
+ros-rolling-vision-opencv (3.0.2-3jammy) jammy; urgency=high
+
+  * Minor cleanups to the ROS 2 branch (#418 <https://github.com/ros-perception/vision_opencv/issues/418>)
+  * Contributors: Chris Lalancette
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 27 Jan 2022 08:00:00 -0000
+
+ros-rolling-vision-opencv (3.0.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Tue, 25 Jan 2022 08:00:00 -0000
+
+ros-rolling-vision-opencv (3.0.0-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 19 Jan 2022 08:00:00 -0000
+
+ros-rolling-vision-opencv (2.2.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 16 Jul 2020 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.2.0-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 27 May 2020 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.1.3-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 23 Oct 2019 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.1.2-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 30 May 2019 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.1.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 26 Apr 2019 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.1.0-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 26 Nov 2018 08:00:00 -0000
+
+ros-rolling-vision-opencv (2.0.5-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 17 Aug 2018 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.0.4-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Tue, 14 Aug 2018 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.0.3-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Tue, 07 Aug 2018 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.0.2-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 29 Jun 2018 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.0.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 28 Jun 2018 07:00:00 -0000
+
+ros-rolling-vision-opencv (2.0.0-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 31 May 2018 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.7-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 12 Nov 2017 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.6-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 11 Nov 2017 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.5-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 05 Nov 2017 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.4-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 29 Jan 2017 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.3-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 04 Dec 2016 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.2-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 24 Sep 2016 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 11 Jul 2016 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.12.0-3jammy) jammy; urgency=high
+
+  * remove opencv_apps from vision_opencv
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 18 Mar 2016 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.12-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 10 Mar 2016 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.11-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 31 Jan 2016 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.10-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 16 Jan 2016 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.9-3jammy) jammy; urgency=high
+
+  * Add opencv_apps to vision_opencv dependency
+  * Contributors: Ryohei Ueda
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 29 Nov 2015 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.8-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 15 Jul 2015 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.7-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 14 Dec 2014 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.6-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 16 Nov 2014 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.5-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 21 Sep 2014 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.4-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 27 Jul 2014 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.3-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 08 Jun 2014 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.2-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 28 Apr 2014 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 16 Apr 2014 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.11.0-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 15 Feb 2014 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.15-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 07 Feb 2014 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.14-3jammy) jammy; urgency=high
+
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 24 Nov 2013 00:17:00 -0000
+
+ros-rolling-vision-opencv (1.10.13-3jammy) jammy; urgency=high
+
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 23 Nov 2013 17:19:00 -0000
+
+ros-rolling-vision-opencv (1.10.12-3jammy) jammy; urgency=high
+
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 22 Nov 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.11-3jammy) jammy; urgency=high
+
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 23 Oct 2013 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.10-3jammy) jammy; urgency=high
+
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 19 Oct 2013 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.9-3jammy) jammy; urgency=high
+
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 07 Oct 2013 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.8-3jammy) jammy; urgency=high
+
+  * update email  address
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 09 Sep 2013 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.7-3jammy) jammy; urgency=high
+
+  * update to REP 0127
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 17 Jul 2013 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.6-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 01 Mar 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.5-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 11 Feb 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.4-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 02 Feb 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.3-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 17 Jan 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.2-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 13 Jan 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 10 Jan 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.10.0-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 03 Jan 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.15-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 02 Jan 2013 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.14-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 30 Dec 2012 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.13-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 15 Dec 2012 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.12-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 14 Dec 2012 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.11-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 10 Dec 2012 08:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.10-3jammy) jammy; urgency=high
+
+  * the CMake file is useless
+  * add the missing CMake file
+  * re-add the meta-package
+  * Contributors: Vincent Rabaud
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 04 Oct 2012 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.9-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Mon, 01 Oct 2012 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.8-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sun, 30 Sep 2012 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.7-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 29 Sep 2012 04:07:00 -0000
+
+ros-rolling-vision-opencv (1.9.6-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 28 Sep 2012 22:17:00 -0000
+
+ros-rolling-vision-opencv (1.9.5-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Sat, 15 Sep 2012 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.4-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Thu, 13 Sep 2012 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.3-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 12 Sep 2012 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.2-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Fri, 07 Sep 2012 07:00:00 -0000
+
+ros-rolling-vision-opencv (1.9.1-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Wed, 29 Aug 2012 05:06:00 -0000
+
+ros-rolling-vision-opencv (1.9.0-3jammy) jammy; urgency=high
+
+
+
+ -- Ethan Gao <ethan.gao@linux.intel.com>  Tue, 28 Aug 2012 21:29:00 -0000
+
+
