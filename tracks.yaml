@@ -165,7 +165,7 @@ tracks:
     last_version: 3.0.3
     name: vision_opencv
     patches: null
-    release_inc: '1'
+    release_inc: '2'
     release_repo_url: git@github.com:ros2-gbp/vision_opencv-release.git
     release_tag: :{version}
     ros_distro: humble
