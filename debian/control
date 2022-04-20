@@ -1,0 +1,12 @@
+Source: ros-humble-vision-opencv
+Section: misc
+Priority: optional
+Maintainer: Ethan Gao <ethan.gao@linux.intel.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ros-workspace
+Homepage: http://www.ros.org/wiki/vision_opencv
+Standards-Version: 3.9.2
+
+Package: ros-humble-vision-opencv
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-cv-bridge, ros-humble-image-geometry, ros-humble-ros-workspace
+Description: Packages for interfacing ROS2 with OpenCV, a library of programming functions for real time computer vision.
