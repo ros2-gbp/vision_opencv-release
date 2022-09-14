@@ -13,14 +13,16 @@ StereoCameraModel::StereoCameraModel(const StereoCameraModel& other)
     Q_(0.0)
 {
   Q_(0,0) = Q_(1,1) = 1.0;
-  if (other.initialized())
+  if (other.initialized()) {
     updateQ();
+  }
 }
 
 StereoCameraModel& StereoCameraModel::operator=(const StereoCameraModel& other)
 {
-  if (other.initialized())
+  if (other.initialized()) {
     this->fromCameraInfo(other.left_.cameraInfo(), other.right_.cameraInfo());
+  }
   return *this;
 }
 
@@ -38,8 +40,9 @@ bool StereoCameraModel::fromCameraInfo(const sensor_msgs::msg::CameraInfo& left,
   assert( left_.cy() == right_.cy() );
   // cx may differ for verged cameras
 
-  if (changed)
+  if (changed) {
     updateQ();
+  }
 
   return changed;
 }
@@ -127,6 +130,9 @@ void StereoCameraModel::projectDisparityTo3d(const cv::Point2d& left_uv_rect, fl
   xyz = XYZ * (1.0/W);
 }
 
+// MISSING_Z is defined as 10000 in
+// https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html#ga1bc1152bd57d63bc524204f21fde6e02
+// Having it as a public member makes this information available for users of cv_bridge.
 const double StereoCameraModel::MISSING_Z = 10000.;
 
 void StereoCameraModel::projectDisparityImageTo3d(const cv::Mat& disparity, cv::Mat& point_cloud,
@@ -137,4 +143,4 @@ void StereoCameraModel::projectDisparityImageTo3d(const cv::Mat& disparity, cv::
   cv::reprojectImageTo3D(disparity, point_cloud, Q_, handleMissingValues);
 }
 
-} //namespace image_geometry
+}  // namespace image_geometry
