@@ -2,6 +2,49 @@
 Changelog for package cv_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.1.0 (2022-09-14)
+------------------
+* Add apache license and bsd license, because both are used. (`#482 <https://github.com/ros-perception/vision_opencv/issues/482>`_)
+* Fix 16U encoding type (`#462 <https://github.com/ros-perception/vision_opencv/issues/462>`_)
+* Reorganize author tag (`#468 <https://github.com/ros-perception/vision_opencv/issues/468>`_)
+* Update maintainers (`#451 <https://github.com/ros-perception/vision_opencv/issues/451>`_)
+* Fix ModuleNotFoundError: No module named 'cv_bridge' error (`#444 <https://github.com/ros-perception/vision_opencv/issues/444>`_)
+* Update README.md (`#252 <https://github.com/ros-perception/vision_opencv/issues/252>`_)
+* Make python3-opencv from test_depend to depend tag in package.xml (`#439 <https://github.com/ros-perception/vision_opencv/issues/439>`_)
+* Contributors: Daisuke Nishimatsu, Kenji Brameld, RachelRen05
+
+3.0.3 (2022-04-01)
+------------------
+* Add missing dependency on rcpputils (`#427 <https://github.com/ros-perception/vision_opencv/issues/427>`_)
+* Contributors: Shane Loretz
+
+3.0.2 (2022-01-27)
+------------------
+* Minor cleanups to the ROS 2 branch (`#418 <https://github.com/ros-perception/vision_opencv/issues/418>`_)
+* Find Python3 if not on Android (`#423 <https://github.com/ros-perception/vision_opencv/issues/423>`_)
+* Forward ports from noetic (`#420 <https://github.com/ros-perception/vision_opencv/issues/420>`_)
+  * Add header arg to cv2_to_imgmsg (`#326 <https://github.com/ros-perception/vision_opencv/issues/326>`_)
+  * prevent conversion of single channel 16bit integer images to/from colour (`#412 <https://github.com/ros-perception/vision_opencv/issues/412>`_)
+* Contributors: Chris Lalancette, Christian Rauch, Michael Carroll, Naoya Yamaguchi, Shane Loretz
+
+3.0.1 (2022-01-25)
+------------------
+* Use Boost::python3 if Boost < 1.67 (`#422 <https://github.com/ros-perception/vision_opencv/issues/422>`_)
+* Use Boost::pythonXY target (`#421 <https://github.com/ros-perception/vision_opencv/issues/421>`_)
+* Contributors: Shane Loretz
+
+3.0.0 (2022-01-19)
+------------------
+* Export Modern CMake targets and install includes to another folder(`#419 <https://github.com/ros-perception/vision_opencv/issues/419>`_)
+* Handle padded img msg in Python (`#400 <https://github.com/ros-perception/vision_opencv/issues/400>`_)
+* Remove boost endian (`#399 <https://github.com/ros-perception/vision_opencv/issues/399>`_)
+* Add conversions from YUV422 YUY2 (`#396 <https://github.com/ros-perception/vision_opencv/issues/396>`_)
+* fix endianness comparison (`#397 <https://github.com/ros-perception/vision_opencv/issues/397>`_)
+* Export sensor_msgs dependency (`#392 <https://github.com/ros-perception/vision_opencv/issues/392>`_)
+* Fix multiple undefined references (`#370 <https://github.com/ros-perception/vision_opencv/issues/370>`_)
+* Updated `cv_bridge.dll` install location. (`#356 <https://github.com/ros-perception/vision_opencv/issues/356>`_)
+* Contributors: Homalozoa X, Jacob Perron, Patrick Musau, Sean Yen, Shane Loretz
+
 2.2.1 (2020-07-16)
 ------------------
 * Align module.hpp with noetic (`#342 <https://github.com/ros-perception/vision_opencv/issues/342>`_)
