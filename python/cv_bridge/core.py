@@ -173,12 +173,15 @@ class CvBridge(object):
         img_buf = np.asarray(img_msg.data, dtype=dtype) if isinstance(img_msg.data, list) else img_msg.data
 
         if n_channels == 1:
-            im = np.ndarray(shape=(img_msg.height, img_msg.width),
+            im = np.ndarray(shape=(img_msg.height, int(img_msg.step/dtype.itemsize)),
                             dtype=dtype, buffer=img_buf)
+            im = np.ascontiguousarray(im[:img_msg.height, :img_msg.width])
         else:
-            im = np.ndarray(shape=(img_msg.height, img_msg.width, n_channels),
+            im = np.ndarray(shape=(img_msg.height, int(img_msg.step/dtype.itemsize/n_channels), n_channels),
                             dtype=dtype, buffer=img_buf)
-        # If the byt order is different between the message and the system.
+            im = np.ascontiguousarray(im[:img_msg.height, :img_msg.width, :])
+
+        # If the byte order is different between the message and the system.
         if img_msg.is_bigendian == (sys.byteorder == 'little'):
             im = im.byteswap().newbyteorder()
 
@@ -233,7 +236,7 @@ class CvBridge(object):
 
         return cmprs_img_msg
 
-    def cv2_to_imgmsg(self, cvim, encoding='passthrough'):
+    def cv2_to_imgmsg(self, cvim, encoding='passthrough', header = None):
         """
         Convert an OpenCV :cpp:type:`cv::Mat` type to a ROS sensor_msgs::Image message.
 
@@ -242,6 +245,7 @@ class CvBridge(object):
 
            * ``"passthrough"``
            * one of the standard strings in sensor_msgs/image_encodings.h
+        :param header:    A std_msgs.msg.Header message
 
         :rtype:           A sensor_msgs.msg.Image message
         :raises CvBridgeError: when the ``cvim`` has a type that is incompatible with ``encoding``
@@ -258,6 +262,8 @@ class CvBridge(object):
         img_msg = sensor_msgs.msg.Image()
         img_msg.height = cvim.shape[0]
         img_msg.width = cvim.shape[1]
+        if header is not None:
+            img_msg.header = header
         if len(cvim.shape) < 3:
             cv_type = self.dtype_with_channels_to_cvtype2(cvim.dtype, 1)
         else:
