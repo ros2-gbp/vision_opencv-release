@@ -33,7 +33,6 @@ else()
   endif()
 endif()
 
-find_package(rclcpp REQUIRED)
 find_package(rcpputils REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
