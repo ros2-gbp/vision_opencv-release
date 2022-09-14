@@ -2,6 +2,27 @@
 Changelog for package vision_opencv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.1.0 (2022-09-14)
+------------------
+* Add apache license and bsd license, because both are used. (`#482 <https://github.com/ros-perception/vision_opencv/issues/482>`_)
+* Reorganize author tag (`#468 <https://github.com/ros-perception/vision_opencv/issues/468>`_)
+* Update maintainers (`#451 <https://github.com/ros-perception/vision_opencv/issues/451>`_)
+* Contributors: Kenji Brameld
+
+3.0.3 (2022-04-01)
+------------------
+
+3.0.2 (2022-01-27)
+------------------
+* Minor cleanups to the ROS 2 branch (`#418 <https://github.com/ros-perception/vision_opencv/issues/418>`_)
+* Contributors: Chris Lalancette
+
+3.0.1 (2022-01-25)
+------------------
+
+3.0.0 (2022-01-19)
+------------------
+
 2.2.1 (2020-07-16)
 ------------------
 
