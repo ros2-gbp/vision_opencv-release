@@ -1,5 +1,5 @@
-#ifndef IMAGE_GEOMETRY_PINHOLE_CAMERA_MODEL_H
-#define IMAGE_GEOMETRY_PINHOLE_CAMERA_MODEL_H
+#ifndef IMAGE_GEOMETRY__PINHOLE_CAMERA_MODEL_H
+#define IMAGE_GEOMETRY__PINHOLE_CAMERA_MODEL_H
 
 #include "image_geometry/visibility_control.hpp"
 
@@ -125,6 +125,7 @@ public:
    */
   IMAGE_GEOMETRY_PUBLIC
   cv::Point3d projectPixelTo3dRay(const cv::Point2d& uv_rect) const;
+  cv::Point3d projectPixelTo3dRay(const cv::Point2d& uv_rect, const cv::Matx34d& P) const;
 
   /**
    * \brief Rectify a raw camera image.
@@ -145,12 +146,14 @@ public:
    */
   IMAGE_GEOMETRY_PUBLIC
   cv::Point2d rectifyPoint(const cv::Point2d& uv_raw) const;
+  cv::Point2d rectifyPoint(const cv::Point2d& uv_raw, const cv::Matx33d& K, const cv::Matx34d& P) const;
 
   /**
    * \brief Compute the raw image coordinates of a pixel in the rectified image.
    */
   IMAGE_GEOMETRY_PUBLIC
   cv::Point2d unrectifyPoint(const cv::Point2d& uv_rect) const;
+  cv::Point2d unrectifyPoint(const cv::Point2d& uv_rect, const cv::Matx33d& K, const cv::Matx34d& P) const;
 
   /**
    * \brief Compute the rectified ROI best fitting a raw ROI.
@@ -253,7 +256,7 @@ public:
    */
   IMAGE_GEOMETRY_PUBLIC
   uint32_t binningY() const;
-  
+
   /**
    * \brief Compute delta u, given Z and delta X in Cartesian space.
    *
@@ -319,6 +322,7 @@ protected:
 
   IMAGE_GEOMETRY_PUBLIC
   void initRectificationMaps() const;
+  void initUnrectificationMaps() const;
 
   friend class StereoCameraModel;
 };
@@ -400,6 +404,6 @@ inline double PinholeCameraModel::getDeltaY(double deltaV, double Z) const
   return Z * deltaV / fy();
 }
 
-} //namespace image_geometry
+}  // namespace image_geometry
 
 #endif
