@@ -2,6 +2,36 @@
 Changelog for package image_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.0.4 (2022-09-14)
+------------------
+* Add apache license and bsd license, because both are used. (`#481 <https://github.com/ros-perception/vision_opencv/issues/481>`_)
+* Reorganize author tag (`#467 <https://github.com/ros-perception/vision_opencv/issues/467>`_)
+* Add description of MISSING_Z (`#464 <https://github.com/ros-perception/vision_opencv/issues/464>`_)
+* Update maintainers (`#451 <https://github.com/ros-perception/vision_opencv/issues/451>`_)
+* Contributors: Kenji Brameld
+
+3.0.3 (2022-04-01)
+------------------
+
+3.0.2 (2022-01-27)
+------------------
+* Minor cleanups to the ROS 2 branch (`#418 <https://github.com/ros-perception/vision_opencv/issues/418>`_)
+* Forward ports from Noetic (`#420 <https://github.com/ros-perception/vision_opencv/issues/420>`_)
+  * substituted missing sphinx extension (`#417 <https://github.com/ros-perception/vision_opencv/issues/417>`_)
+  * Fix rectifyRoi when used with binning and/or ROI (`#378 <https://github.com/ros-perception/vision_opencv/issues/378>`_)
+  * Implement unrectifyImage() (`#359 <https://github.com/ros-perception/vision_opencv/issues/359>`_)
+  * Add equidistant distortion model (`#358 <https://github.com/ros-perception/vision_opencv/issues/358>`_)
+* Contributors: Chris Lalancette, Martin Günther, Michael Carroll, Paddy
+
+3.0.1 (2022-01-25)
+------------------
+
+3.0.0 (2022-01-19)
+------------------
+* Export Modern CMake targets and install includes to another folder(`#419 <https://github.com/ros-perception/vision_opencv/issues/419>`_)
+* fix windows build for image_geometry (`#388 <https://github.com/ros-perception/vision_opencv/issues/388>`_)
+* Contributors: Evan Flynn, Shane Loretz
+
 2.2.1 (2020-07-16)
 ------------------
 
