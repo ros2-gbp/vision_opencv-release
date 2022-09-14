@@ -2,12 +2,11 @@
 Changelog for package image_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.2.0 (2022-09-14)
+3.1.0 (2022-09-14)
 ------------------
-* Add apache license and bsd license, because both are used. (`#483 <https://github.com/ros-perception/vision_opencv/issues/483>`_)
-* Reorganize author tag (`#469 <https://github.com/ros-perception/vision_opencv/issues/469>`_)
-* Add description of MISSING_Z (`#466 <https://github.com/ros-perception/vision_opencv/issues/466>`_)
-* Fix visibility of static const data member MISSING_Z (`#442 <https://github.com/ros-perception/vision_opencv/issues/442>`_)
+* Add apache license and bsd license, because both are used. (`#482 <https://github.com/ros-perception/vision_opencv/issues/482>`_)
+* Reorganize author tag (`#468 <https://github.com/ros-perception/vision_opencv/issues/468>`_)
+* Add description of MISSING_Z (`#465 <https://github.com/ros-perception/vision_opencv/issues/465>`_)
 * Update maintainers (`#451 <https://github.com/ros-perception/vision_opencv/issues/451>`_)
 * Contributors: Kenji Brameld
 
