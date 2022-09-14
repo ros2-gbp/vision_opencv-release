@@ -5,7 +5,7 @@ package_name = 'opencv_tests'
 
 setup(
     name=package_name,
-    version='2.2.1',
+    version='3.1.0',
     packages=find_packages(exclude=['launch']),
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -16,8 +16,8 @@ setup(
     zip_safe=True,
     author='Ethan Gao',
     author_email='ethan.gao@linux.intel.com',
-    maintainer='Ethan Gao',
-    maintainer_email='ethan.gao@linux.intel.com',
+    maintainer='Kenji Brameld',
+    maintainer_email='kenjibrameld@gmail.com',
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
@@ -32,9 +32,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'source = nodes.source:main',
-            'broadcast = nodes.broadcast:main',
-            'rosfacedetect = nodes.rosfacedetect:main',
+            'source = opencv_tests.source:main',
+            'broadcast = opencv_tests.broadcast:main',
+            'rosfacedetect = opencv_tests.rosfacedetect:main',
         ],
     },
 )
