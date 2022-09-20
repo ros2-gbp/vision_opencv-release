@@ -2,9 +2,10 @@
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
   <name>vision_opencv</name>
-  <version>3.0.3</version>
+  <version>3.2.1</version>
   <description>Packages for interfacing ROS2 with OpenCV, a library of programming functions for real time computer vision.</description>
-  <maintainer email="ethan.gao@linux.intel.com">Ethan Gao</maintainer>
+  <maintainer email="kenjibrameld@gmail.com">Kenji Brameld</maintainer>
+  <license>Apache License 2.0</license>
   <license>BSD</license>
 
   <url type="website">http://www.ros.org/wiki/vision_opencv</url>
@@ -14,6 +15,7 @@
   <author>Patrick Mihelich</author>
   <author>James Bowman</author>
   <author>Vincent Rabaud</author>
+  <author email="ethan.gao@linux.intel.com">Ethan Gao</author>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
