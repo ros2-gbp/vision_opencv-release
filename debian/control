@@ -1,0 +1,12 @@
+Source: ros-foxy-cv-bridge
+Section: misc
+Priority: optional
+Maintainer: Kenji Brameld <kenjibrameld@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-dev, libboost-python-dev, libopencv-dev, python3-numpy, python3-opencv, ros-foxy-ament-cmake-gtest <!nocheck>, ros-foxy-ament-cmake-pytest <!nocheck>, ros-foxy-ament-cmake-ros, ros-foxy-ament-lint-auto <!nocheck>, ros-foxy-ament-lint-common <!nocheck>, ros-foxy-python-cmake-module, ros-foxy-rcpputils, ros-foxy-sensor-msgs, ros-foxy-ros-workspace
+Homepage: http://www.ros.org/wiki/cv_bridge
+Standards-Version: 3.9.2
+
+Package: ros-foxy-cv-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-python1.71.0, libopencv-dev, python3-numpy, python3-opencv, ros-foxy-ament-index-python, ros-foxy-rcpputils, ros-foxy-sensor-msgs, ros-foxy-ros-workspace
+Description: This contains CvBridge, which converts between ROS2 Image messages and OpenCV images.
