@@ -1,3 +1,32 @@
+## vision_opencv (rolling) - 3.3.1-1
+
+The packages in the `vision_opencv` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling vision_opencv` on `Tue, 20 Sep 2022 22:40:00 -0000`
+
+These packages were released:
+- `cv_bridge`
+- `image_geometry`
+- `vision_opencv`
+
+These packages were explicitly ignored:
+- `opencv_tests`
+
+Version of package(s) in repository `vision_opencv`:
+
+- upstream repository: https://github.com/ros-perception/vision_opencv.git
+- release repository: https://github.com/ros2-gbp/vision_opencv-release.git
+- rosdistro version: `3.3.0-1`
+- old version: `3.3.0-1`
+- new version: `3.3.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## vision_opencv (galactic) - 3.1.2-1
 
 The packages in the `vision_opencv` repository were released into the `galactic` distro by running `/usr/bin/bloom-release --rosdistro galactic vision_opencv` on `Tue, 20 Sep 2022 22:05:34 -0000`
