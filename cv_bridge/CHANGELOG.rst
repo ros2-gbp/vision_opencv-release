@@ -2,26 +2,25 @@
 Changelog for package cv_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.1.2 (2022-09-21)
+3.3.1 (2022-09-21)
 ------------------
-* Fix windows build when Boost 1.67 or newer (`#489 <https://github.com/ros-perception/vision_opencv/issues/489>`_)
+* export rclcpp as dependency (`#491 <https://github.com/ros-perception/vision_opencv/issues/491>`_)
+* silence dperecation warnings using boost macros (`#478 <https://github.com/ros-perception/vision_opencv/issues/478>`_)
 * Contributors: Kenji Brameld
 
-3.1.1 (2022-09-17)
+3.3.0 (2022-09-14)
 ------------------
-* Revert API breakages
-* Contributors: Kenji Brameld
-
-3.1.0 (2022-09-14)
-------------------
-* Add apache license and bsd license, because both are used. (`#482 <https://github.com/ros-perception/vision_opencv/issues/482>`_)
-* Fix 16U encoding type (`#462 <https://github.com/ros-perception/vision_opencv/issues/462>`_)
-* Reorganize author tag (`#468 <https://github.com/ros-perception/vision_opencv/issues/468>`_)
+* Add apache license and bsd license, because both are used. (`#479 <https://github.com/ros-perception/vision_opencv/issues/479>`_)
+* Remove opencv2.cpp and rename opencv3.cpp to opencv4.cpp (`#480 <https://github.com/ros-perception/vision_opencv/issues/480>`_)
+* Deprecate .h files in favor of .hpp headers (`#448 <https://github.com/ros-perception/vision_opencv/issues/448>`_)
+* Reorganize author tag (`#460 <https://github.com/ros-perception/vision_opencv/issues/460>`_)
+* Add colormap argument to python wrapper (`#452 <https://github.com/ros-perception/vision_opencv/issues/452>`_)
+* Fix 16U encoding type (`#459 <https://github.com/ros-perception/vision_opencv/issues/459>`_)
+* Add type adapter for cv::Mat (`#441 <https://github.com/ros-perception/vision_opencv/issues/441>`_)
 * Update maintainers (`#451 <https://github.com/ros-perception/vision_opencv/issues/451>`_)
 * Fix ModuleNotFoundError: No module named 'cv_bridge' error (`#444 <https://github.com/ros-perception/vision_opencv/issues/444>`_)
-* Update README.md (`#252 <https://github.com/ros-perception/vision_opencv/issues/252>`_)
 * Make python3-opencv from test_depend to depend tag in package.xml (`#439 <https://github.com/ros-perception/vision_opencv/issues/439>`_)
-* Contributors: Daisuke Nishimatsu, Kenji Brameld, RachelRen05
+* Contributors: Daisuke Nishimatsu, Kenji Brameld, Marcel Zeilinger, RachelRen05
 
 3.0.3 (2022-04-01)
 ------------------

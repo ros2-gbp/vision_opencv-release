@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.14)
 project(cv_bridge)
 
 find_package(ament_cmake_ros REQUIRED)
@@ -12,31 +12,28 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra)
 endif()
 
-if(NOT ANDROID)
-  find_package(PythonLibs REQUIRED)
-  if(PYTHONLIBS_VERSION_STRING VERSION_LESS 3)
-    find_package(Boost REQUIRED python)
-  else()
-    find_package(Boost QUIET)
-    if(Boost_VERSION LESS 106700)
-      # This is a bit of a hack to suppress a warning
-      #   No header defined for python3; skipping header check
-      # Which should only affect Boost versions < 1.67
-      # Resolution for newer versions:
-      #  https://gitlab.kitware.com/cmake/cmake/issues/16391
-      set(_Boost_PYTHON3_HEADERS "boost/python.hpp")
-      find_package(Boost REQUIRED python)
-    else()
-      string(REPLACE "." ";" VERSION_LIST ${PYTHONLIBS_VERSION_STRING})
-      list(GET VERSION_LIST 0 PYTHONLIBS_VERSION_MAJOR)
-      list(GET VERSION_LIST 1 PYTHONLIBS_VERSION_MINOR)
-      find_package(Boost COMPONENTS python${PYTHONLIBS_VERSION_MAJOR}${PYTHONLIBS_VERSION_MINOR} REQUIRED)
-    endif()
-  endif()
-else()
+if(ANDROID)
   find_package(Boost REQUIRED)
+  set(boost_python_target "")
+else()
+  find_package(Python3 REQUIRED COMPONENTS Development NumPy)
+  find_package(Boost QUIET)
+  if(Boost_VERSION_STRING VERSION_LESS "1.67")
+    # This is a bit of a hack to suppress a warning
+    #   No header defined for python3; skipping header check
+    # Which should only affect Boost versions < 1.67
+    # Resolution for newer versions:
+    #  https://gitlab.kitware.com/cmake/cmake/issues/16391
+    set(_Boost_PYTHON3_HEADERS "boost/python.hpp")
+    find_package(Boost REQUIRED COMPONENTS python3)
+    set(boost_python_target "Boost::python3")
+  else()
+    find_package(Boost REQUIRED COMPONENTS python${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR})
+    set(boost_python_target "Boost::python${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR}")
+  endif()
 endif()
 
+find_package(rclcpp REQUIRED)
 find_package(rcpputils REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
@@ -78,16 +75,13 @@ endif()
 ament_export_dependencies(
   OpenCV
   sensor_msgs
+  rclcpp
 )
 
-ament_export_include_directories(include)
-ament_export_libraries(${PROJECT_NAME})
+ament_export_targets(export_${PROJECT_NAME})
 
 # install the include folder
-install(
-  DIRECTORY include/${PROJECT_NAME}/
-  DESTINATION include/${PROJECT_NAME}
-)
+install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 
 install(TARGETS ${PROJECT_NAME}
         RUNTIME DESTINATION bin
