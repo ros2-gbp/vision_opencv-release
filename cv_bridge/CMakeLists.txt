@@ -33,6 +33,7 @@ else()
   endif()
 endif()
 
+find_package(rclcpp REQUIRED)
 find_package(rcpputils REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
@@ -74,6 +75,7 @@ endif()
 ament_export_dependencies(
   OpenCV
   sensor_msgs
+  rclcpp
 )
 
 ament_export_targets(export_${PROJECT_NAME})
