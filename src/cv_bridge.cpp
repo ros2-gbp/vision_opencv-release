@@ -599,7 +599,8 @@ CvImageConstPtr cvtColorForDisplay(
       } else {
         // We choose BGR by default here as we assume people will use OpenCV
         if ((enc::bitDepth(source->encoding) == 8) ||
-          (enc::bitDepth(source->encoding) == 16))
+          (enc::bitDepth(source->encoding) == 16) || 
+          (enc::bitDepth(source->encoding) == 32))
         {
           encoding = enc::BGR8;
         } else {
@@ -649,7 +650,9 @@ CvImageConstPtr cvtColorForDisplay(
 
   // Perform scaling if asked for
   if (options.do_dynamic_scaling) {
-    cv::minMaxLoc(source->image, &min_image_value, &max_image_value);
+    float inf = std::numeric_limits<float>::infinity();
+    cv::Mat mask = ((source->image!=inf) & (source->image!=-inf));
+    cv::minMaxLoc(source->image, &min_image_value, &max_image_value, NULL, NULL, mask);
     if (min_image_value == max_image_value) {
       CvImagePtr result(new CvImage());
       result->header = source->header;
