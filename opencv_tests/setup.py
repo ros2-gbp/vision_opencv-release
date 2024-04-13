@@ -5,7 +5,7 @@ package_name = 'opencv_tests'
 
 setup(
     name=package_name,
-    version='3.4.0',
+    version='3.5.0',
     packages=find_packages(exclude=['launch']),
     data_files=[
         ('share/ament_index/resource_index/packages',
