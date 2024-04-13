@@ -2,13 +2,11 @@
 Changelog for package image_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.0.0 (2024-04-13)
+3.5.0 (2024-04-13)
 ------------------
-* Add unit tests for all public members (`#526 <https://github.com/ros-perception/vision_opencv/pull/526>`_)
-* Remove header files that were deprecated in I-turtle (`#517 <https://github.com/ros-perception/vision_opencv/issues/517>`_)
 * Use c++17 (`#515 <https://github.com/ros-perception/vision_opencv/issues/515>`_)
 * Remove unused travis file
-* Contributors: Kenji Brameld, Scott Monaghan, andrea, ijnek
+* Contributors: Kenji Brameld, andrea
 
 3.4.0 (2022-10-03)
 ------------------
