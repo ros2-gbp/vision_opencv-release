@@ -1,1 +1,1 @@
-{"base": "ed962db", "parent": "debian/rolling/vision_opencv", "previous": "4613429", "trim": "", "trimbase": ""}
+{"base": "9aa6ab1", "parent": "debian/jazzy/vision_opencv", "previous": "4cc70a0", "trim": "", "trimbase": ""}
