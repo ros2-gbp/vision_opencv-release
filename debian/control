@@ -1,0 +1,12 @@
+Source: ros-jazzy-cv-bridge
+Section: misc
+Priority: optional
+Maintainer: Kenji Brameld <kenjibrameld@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-dev, libboost-python-dev, libopencv-dev, python3-numpy, python3-opencv, ros-jazzy-ament-cmake-gtest <!nocheck>, ros-jazzy-ament-cmake-pytest <!nocheck>, ros-jazzy-ament-cmake-ros, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-python-cmake-module, ros-jazzy-rclcpp, ros-jazzy-rcpputils, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Homepage: http://www.ros.org/wiki/cv_bridge
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-cv-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-python1.83.0, libopencv-dev, python3-numpy, python3-opencv, ros-jazzy-ament-index-python, ros-jazzy-rclcpp, ros-jazzy-rcpputils, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Description: This contains CvBridge, which converts between ROS2 Image messages and OpenCV images.
