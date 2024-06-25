@@ -1,3 +1,32 @@
+## vision_opencv (jazzy) - 4.1.0-1
+
+The packages in the `vision_opencv` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy --track jazzy vision_opencv -e` on `Tue, 25 Jun 2024 12:53:10 -0000`
+
+These packages were released:
+- `cv_bridge`
+- `image_geometry`
+- `vision_opencv`
+
+These packages were explicitly ignored:
+- `opencv_tests`
+
+Version of package(s) in repository `vision_opencv`:
+
+- upstream repository: https://github.com/ros-perception/vision_opencv.git
+- release repository: https://github.com/ros2-gbp/vision_opencv-release.git
+- rosdistro version: `4.0.0-2`
+- old version: `4.0.0-2`
+- new version: `4.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.24.0`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## vision_opencv (rolling) - 4.1.0-1
 
 The packages in the `vision_opencv` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling vision_opencv` on `Fri, 19 Apr 2024 21:20:25 -0000`
