@@ -1,0 +1,12 @@
+Source: ros-kilted-cv-bridge
+Section: misc
+Priority: optional
+Maintainer: Kenji Brameld <kenjibrameld@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-dev, libboost-python-dev, libopencv-dev, python3-numpy, python3-opencv, ros-kilted-ament-cmake-gtest <!nocheck>, ros-kilted-ament-cmake-pytest <!nocheck>, ros-kilted-ament-cmake-ros, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-ament-lint-common <!nocheck>, ros-kilted-python-cmake-module, ros-kilted-rclcpp, ros-kilted-rcpputils, ros-kilted-sensor-msgs, ros-kilted-ros-workspace
+Homepage: http://www.ros.org/wiki/cv_bridge
+Standards-Version: 3.9.2
+
+Package: ros-kilted-cv-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-python1.83.0, libopencv-dev, python3-numpy, python3-opencv, ros-kilted-ament-index-python, ros-kilted-rclcpp, ros-kilted-rcpputils, ros-kilted-sensor-msgs, ros-kilted-ros-workspace
+Description: This contains CvBridge, which converts between ROS2 Image messages and OpenCV images.
