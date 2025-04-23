@@ -1,1 +1,1 @@
-{"base": "f08e2f3", "parent": "debian/rolling/image_geometry", "previous": "5d4e8e8", "trim": "", "trimbase": ""}
+{"base": "4a7baf79c753", "parent": "debian/kilted/image_geometry", "previous": "c3e2248ab63d", "trim": "", "trimbase": ""}
