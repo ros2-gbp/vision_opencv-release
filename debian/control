@@ -1,0 +1,12 @@
+Source: ros-lyrical-vision-opencv
+Section: misc
+Priority: optional
+Maintainer: Kenji Brameld <kenjibrameld@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ros-workspace
+Homepage: http://www.ros.org/wiki/vision_opencv
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-vision-opencv
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-cv-bridge, ros-lyrical-image-geometry, ros-lyrical-ros-workspace
+Description: Packages for interfacing ROS2 with OpenCV, a library of programming functions for real time computer vision.
